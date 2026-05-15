@@ -13,7 +13,7 @@ interface Particle {
 
 export function useParticles(containerRef: React.RefObject<HTMLDivElement>, isActive: boolean = true) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number>(0)
   const particlesRef = useRef<Particle[]>([])
   const mouseRef = useRef({ x: 0, y: 0, active: false })
   const dimensionsRef = useRef({ width: 0, height: 0 })

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Plus } from 'lucide-react'
@@ -21,10 +20,10 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 300, damping: 24 } },
 }
 
-export function Dashboard({ projects, onToggleTask }: DashboardProps) {
+export function Dashboard({ projects }: DashboardProps) {
   return (
     <div className="space-y-12 pb-12">
       <Hero name="Aayan" />

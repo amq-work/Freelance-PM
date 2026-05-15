@@ -9,7 +9,7 @@ interface ParticleBackgroundProps {
 
 export function ParticleBackground({ children, className = '', active = true }: ParticleBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  useParticles(containerRef, active)
+  useParticles(containerRef as React.RefObject<HTMLDivElement>, active)
   
   return (
     <div ref={containerRef} className={`relative ${className}`}>
