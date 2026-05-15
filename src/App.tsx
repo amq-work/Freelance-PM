@@ -115,7 +115,7 @@ export default function App() {
   }
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Freelance-PM">
       <Layout>
         <Routes>
           <Route path="/" element={<Dashboard projects={projects} onToggleTask={handleToggleTask} />} />
